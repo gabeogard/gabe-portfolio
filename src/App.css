@@ -1,7 +1,12 @@
+:root {
+ --primarybg-color: #1c1c31;
+  font-family: "Droid Sans Mono", "Courier New", monospace;
+}
+
 body{
   margin: 0;
   padding: 0;
-  font-family: "Fira Code", sans-serif;
+  background: var(--primarybg-color);
 }
 
 ul{
@@ -10,35 +15,81 @@ ul{
   padding: 0;
 }
 
-.nav-link {
+.navbar-nav a {
   color: currentColor;
   text-decoration: none;
-  opacity: 0.8;
-  transition: 100ms ease-in;
 }
 .nav-link:hover{
   opacity: 1;
   font-size: 115%;
+  text-decoration: underline;
+
+}
+ul.navbar-nav li{
+  list-style: none;
+  display: inline-block;
+  padding-bottom:2px; /*the space for the gradient*/
+   /*OR bottom right OR bottom left*/
+  background-size: 0 2px; /*width:0% height:2px*/
+  background-repeat:no-repeat; /* Don't repeat !!*/
+  transition: all 0.45s;
+}
+ul.navbar-nav li:hover{
+  background-size: 100% 2px;
 }
 .navbar {
   height: 70px;
   width: 100%;
-  background: #463d3d;
+  background-color: var(--primarybg-color);
   color: white;
   position: fixed;
   top:0;
+  overflow: hidden;
 }
 
-.navbar-nav {
+ul.navbar-nav {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
+  overflow: hidden;
+}
+
+.nav-link{
+  transition: 100ms ease-in;
+}
+.main-flex{
+  margin-top: 75px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.flex-item{
+  order: 1;
+  align-self: center;
+  width: 100rem;
+  margin: 0.25rem;
+  opacity: 1;
+  color: white;
+  text-align: center;
 }
 
 
-.main-head{
-  margin-top: 70px;
+
+
+.container{
+  display: inline-block;
+  color: white;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 48% }
+}
+@keyframes blink {
+  from { border-color: transparent }
+  to { border-color: #ffffff; }
 }
 
 
