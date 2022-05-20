@@ -3,7 +3,7 @@ function NavBar() {
         <nav className={"navbar"}>
             <ul className={"navbar-nav"}>
                 <li className={"nav-item"}><a className={"nav-link"} href={"#"}>Home</a></li>
-                <li className={"nav-item"}><a className={"nav-link"} href={"#"}>About</a></li>
+                <li className={"nav-item"}><a className={"nav-link"} href={"#about"}>About</a></li>
                 <li className={"nav-item"}><a className={"nav-link"} href={"#"}>Projects</a></li>
                 <li className={"nav-item"}><a className={"nav-link"} href={"#"}>Skills</a></li>
                 <li className={"nav-item"}><a className={"nav-link"} href={"#"}>Contact</a></li>
@@ -24,7 +24,7 @@ const PostItem = () => {
 function AboutMe() {
     return(
 
-        <div className={"flex-item"}>
+        <div className={"flex-item"} id={"about"}>
             <h1>About me</h1>
             <span className={"type"}>
                 I am a Fullstack Software Engineer <br/>
@@ -34,24 +34,17 @@ function AboutMe() {
     );
 }
 
+function ProjectSection() {
+    return null;
+}
+
 export const FrontPage = () => {
     return(
         <>
             <NavBar/>
             <div className={"main-flex"}>
                 <AboutMe/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-                <PostItem/>
-
+                <ProjectSection/>
             </div>
         </>
     );
