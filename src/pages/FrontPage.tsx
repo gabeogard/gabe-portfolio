@@ -1,3 +1,4 @@
+import {ProjectSection} from "./ProjectSection";
 import {AboutMe} from "./AboutMe";
 
 function NavBar() {
@@ -25,17 +26,13 @@ const PostItem = () => {
     );
 }
 
-function ProjectSection() {
-    return null;
-}
-
 export const FrontPage = () => {
     return(
         <>
             <NavBar/>
             <div className={"main-content"}>
                 <AboutMe/>
-                {/**<ProjectSection/>**/}
+                <ProjectSection/>
             </div>
         </>
     );
