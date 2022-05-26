@@ -1,123 +1,182 @@
 :root {
- --primarybg-color: #1c1c31;
-  font-family: "Droid Sans Mono", "Courier New", monospace;
+    --primarybg-color: #1c1c31;
+    font-family: "Droid Sans Mono", "Courier New", monospace;
 }
 
-body{
-  margin: 0;
-  padding: 0;
-  background: var(--primarybg-color);
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primarybg-color);
+
 }
 
-ul{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-nav a {
-  color: currentColor;
-  text-decoration: none;
+    color: currentColor;
+    text-decoration: none;
+    transition: all 150ms ease-in-out;
 }
-.nav-link:hover{
-  opacity: 1;
-  font-size: 115%;
-  text-decoration: underline;
+
+.nav-link:hover {
+    opacity: 1;
+    font-size: 115%;
+    text-decoration: underline;
 
 }
-ul.navbar-nav li{
-  list-style: none;
-  display: inline-block;
-  padding-bottom:2px; /*the space for the gradient*/
-   /*OR bottom right OR bottom left*/
-  background-size: 0 2px; /*width:0% height:2px*/
-  background-repeat:no-repeat; /* Don't repeat !!*/
-  transition: all 0.45s;
+
+ul.navbar-nav li {
+    list-style: none;
+    display: inline-block;
+    padding-bottom: 2px; /*the space for the gradient*/
+    /*OR bottom right OR bottom left*/
+    background-size: 0 2px; /*width:0% height:2px*/
+    background-repeat: no-repeat; /* Don't repeat !!*/
+    transition: 200ms ease-in;
 }
-ul.navbar-nav li:hover{
-  background-size: 100% 2px;
+
+ul.navbar-nav li:hover {
+    background-size: 100% 2px;
 }
+
 .navbar {
-  height: 70px;
-  width: 100%;
-  background-color: var(--primarybg-color);
-  color: white;
-  position: fixed;
-  top:0;
-  overflow: hidden;
+    height: 70px;
+    width: 100%;
+    background-color: var(--primarybg-color);
+    color: white;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
 }
 
 ul.navbar-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  height: 100%;
-  overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    overflow: hidden;
 }
 
-.nav-link{
-  transition: 100ms ease-in;
-}
-.main-flex{
-  margin-top: 75px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
 
-.flex-item{
-  order: 1;
-  align-self: center;
-  width: 100rem;
-  margin: 0.25rem;
-  opacity: 1;
-  color: white;
-  text-align: center;
-}
-
-@media (min-width:320px){
-  .flex-item{
-    order: 1;
-    align-self: center;
-    width: 25rem;
-    margin: 0.25rem;
-    opacity: 1;
-    color: white;
-    text-align: center;
-  }
-}
-
-@media (min-width:1025px) {
-  .flex-item{
-    order: 1;
-    align-self: center;
+.flex-container {
+    margin-top: 70px;
     width: 100rem;
-    margin: 0.25rem;
-    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     color: white;
-    text-align: center;
-  }
 
-  .flex-item .type{
+}
+
+.flex-container > div {
+    margin: 10px;
     text-align: left;
-  }
 }
 
-
-.container{
-  display: inline-block;
-  color: white;
+.item1 {
+    flex-basis: 60rem;
+    border-radius: 7px;
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 48% }
-}
-@keyframes blink {
-  from { border-color: transparent }
-  to { border-color: #ffffff; }
+.item2 {
+    flex-basis: 25rem;
+    border-radius: 7px;
+    justify-content: center;
 }
 
+.item3 {
+    flex-basis: 86rem;
+    border-radius: 7px;
+}
 
+.item4 {
+    flex-basis: 40rem;
+    opacity: 0.55;
+    border-radius: 7px;
+}
 
+.main-content {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-container2{
+    display: grid;
+    text-align: center;
+    grid-template-columns: auto auto auto auto;
+}
+.flex-container2 h1{
+    font-size: 25px;
+}
+
+h1{
+    text-align: center;
+    font-size: 25px;
+}
+
+.icon{
+    font-size: 40px;
+}
+
+.bio{
+    text-align: left;
+}
+
+.bio-section{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    align-self: baseline;
+}
+
+.img{
+    width: 60%;
+    height: 55%;
+    opacity: 1;
+    justify-content: center;
+    margin-top: 25px;
+    margin-left: 80px;
+    align-self: center;
+}
+
+.profile{
+    opacity: 100;
+    display: inline-block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.contact-icon{
+    font-size: 30px;
+    transition: all 100ms ease-in-out;
+}
+
+.contact-icon:hover{
+    font-size: 35px;
+    opacity: 0.8;
+    filter: drop-shadow(5px 5px 15px black);
+}
+
+.contact-icons{
+    width: 240px;
+    align-self: center;
+    margin-left: 70px;
+    margin-top: 15px;
+    justify-content: space-evenly;
+    display: flex;
+
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
 
