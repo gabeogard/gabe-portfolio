@@ -66,8 +66,29 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-content: center;
+    align-items: center;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.project-card{
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: white;
+    min-width: 350px;
+    max-width: 600px;
+    background-color: #454579;
+    padding: 1.0rem;
+    border-radius: 10px;
+}
+
+.project-card h1 {
+    font-size: 20px;
+}
+
+.project-card h2 {
+    font-size: 17px;
 }
 
 .bio-section {
